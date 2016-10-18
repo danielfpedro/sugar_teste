@@ -1,0 +1,26 @@
+{
+  "name": "sugar",
+  "authors": [
+    "Daniel Pedro <danielfpedro@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.0.0",
+    "animate.css": "^3.5.2",
+    "font-awesome": "^4.6.3",
+    "awesome-bootstrap-checkbox": "^1",
+    "optiscroll": "^2.0.0",
+    "sweetalert2": "^5.2.0"
+  }
+}

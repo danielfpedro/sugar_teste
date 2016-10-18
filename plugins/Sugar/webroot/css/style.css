@@ -1,0 +1,192 @@
+html {
+    min-height: 100%;
+}
+html, body {
+    height: 100%;
+}
+.sugar-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    padding-top: 51px;
+}
+
+.sugar-sidebar {
+    background-color: green;
+    width: 260px;
+    max-height: 100%;
+
+    overflow: hidden;
+}
+.sugar-content {
+/*    background-color: red;*/
+    background-color: #f5f5f5;
+    flex: 1;
+}
+
+/*NAVBAR*/
+.sugar-navbar-body {
+    margin-left: 245px!important;
+}
+.sugar-navbar-main-control {
+    margin-right: 15px;
+}
+
+/*SIDEBAR*/
+.main-sidebar {
+    padding: 15px;
+}
+.sugar-sidebar {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+    background: #a90329; /* Old browsers */
+    background: -moz-linear-gradient(top,  #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+}
+.sugar-sidebar-overlay {
+    background-image: url(../img/sidebar-3.jpg);
+    background-position: center bottom;    
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    opacity: .1;
+}
+.submenu {
+    margin-top: 5px;
+}
+.sugar-nav-sidebar > li{
+    margin-bottom: 5px;
+}
+.sugar-nav-sidebar > li > a{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.sugar-nav-sidebar > li > a > span#caret{
+    float: right;
+}
+.sugar-nav-sidebar > li > a > span.fa, .sugar-nav-sidebar > li > a > i.fa {
+    font-size: 20px;
+    margin-right: 6px;
+}
+.sugar-nav-sidebar > li > a > span#caret {
+    font-size: 12px;
+}
+.sugar-nav-sidebar > li > a:hover, .sugar-nav-sidebar > li > a:focus{
+    background-color: rgba(255, 255, 255, .2);
+}
+.sugar-nav-sidebar > li > a.active{
+    background-color: rgba(255, 255, 255, .3)!important;
+}
+
+.sugar-sidemenu-title {
+    margin-left: 25px;
+    color: #EEE;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+.sugar-sidemenu-separator {
+    border-bottom: 1px solid red;
+}
+.sugar-submenu-hidden {
+    display: none;
+}
+.submenu > li > a {
+    padding-left: 55px;
+    font-size: 12px;
+}
+
+/*BREADCRUMB*/
+.sugar-breadcrumb {
+    background-color: #fff;
+    padding: 15px 20px;
+}
+.sugar-breadcrumb > h1 {
+    margin: 0;
+    font-size: 22px;
+}
+.sugar-breadcrumb > ul.breadcrumb {
+    background: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 2px;
+    margin-top: 10px;
+}
+.sugar-panel-content{
+    margin: 15px 20px;
+}
+.sugar-panel-content > table > thead > tr > th{
+    border-top: none;
+}
+.sugar-breadcrumb-tools {
+    float: right;
+    margin-top: -35px;
+}
+
+.sugar-panel-form {
+    padding-top: 20px;
+}
+
+/*MAIN FILTER*/
+.sugar-main-filter-search {
+    margin-top: 25px;
+}
+
+.panel-login {
+    width: 400px;
+    z-index: 1;
+}
+.sugar-logo-login {
+    text-align: center;
+    display: block;
+}
+.sugar-container-login {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sugar-login-overlay {
+    background-color: green;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+.sugar-panel-paginator {
+    display: flex;
+    text-align: right;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+.sugar-panel-paginator > ul.pagination {
+    margin-left: 15px;
+}
+.sugar-navbar-profile-picture{
+    width: 15px;
+}
+
+.sugar-notify {
+/*    position: fixed;
+    z-index: 10;
+    left: 0;
+    bottom: 0;*/
+    border-radius: 0!important;
+}
