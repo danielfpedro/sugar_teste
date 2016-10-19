@@ -27,6 +27,24 @@ use Cake\Auth\DefaultPasswordHasher;
  */
 class AppController extends Controller
 {
+    public $helpers = [
+        'Sugar.Sugar',
+        'Form' => [
+            'className' => 'Bootstrap.BootstrapForm',
+        ],
+        'Html' => [
+            'className' => 'Bootstrap.BootstrapHtml'
+        ],
+        'Form' => [
+            'className' => 'Bootstrap.BootstrapForm'
+        ],
+        'Paginator' => [
+            'className' => 'Bootstrap.BootstrapPaginator'
+        ],
+        'Modal' => [
+          'className' => 'Bootstrap.BootstrapModal'
+        ]
+    ];
 
     /**
      * Initialization hook method.
@@ -78,5 +96,13 @@ class AppController extends Controller
         ) {
             $this->set('_serialize', true);
         }
+
+        $dashboardOptions = [
+            'name' => 'Sugar'
+        ];
+
+        $loggedinUser = $this->Auth->user();
+
+        $this->set(compact('dashboardOptions', 'loggedinUser'));
     }
 }

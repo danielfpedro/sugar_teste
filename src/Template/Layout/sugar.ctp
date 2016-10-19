@@ -18,7 +18,7 @@
     <?= $this->Html->css('../lib/animate.css/animate.min') ?>
 
     <!--  Light Bootstrap Table core CSS    -->
-    <?= $this->Html->css('style') ?>
+    <?= $this->Html->css('Sugar.style') ?>
     <?= $this->Html->css('../lib/optiscroll/dist/optiscroll') ?>
     <?= $this->Html->css('sugar-custom-scroll') ?>
     <?= $this->Html->css('../lib/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox') ?>
@@ -33,7 +33,7 @@
 </head>
 <body>
 
-	<?= $this->element('navbar') ?>
+	<?= $this->element('Sugar.navbar') ?>
 
 	<div class="sugar-container">
 		<aside class="sugar-sidebar optiscroll" style="">
