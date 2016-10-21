@@ -1,4 +1,4 @@
-<!doctype html>
+	<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
@@ -37,7 +37,7 @@
 
 	<div class="sugar-container">
 		<aside class="sugar-sidebar optiscroll" style="">
-			<?= $this->cell('sidebar') ?>	
+			<?= $this->cell('Sugar.sidebar') ?>	
 		</aside>
 		<main class="sugar-content">
 			
