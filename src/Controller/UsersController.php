@@ -3,6 +3,8 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
+use Cake\Event\Event;
+
 /**
  * Users Controller
  *
@@ -10,6 +12,13 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController
 {
+
+    public function beforeRender(Event $event)
+    {
+        parent::beforeFilter($event);
+        $this->log('oi');
+        $this->Users = $this->loadModel('Users');
+    }
 
     /**
      * Index method
@@ -165,7 +174,10 @@ class UsersController extends AppController
         $this->set(compact('user'));
         $this->set('_serialize', ['user']);
     }
+    public function tey()
+    {
 
+    }
     /**
      * ProfileSettings method
      *
@@ -175,8 +187,9 @@ class UsersController extends AppController
      */
     public function profileSettings()
     {
+        $this->log($this->Users);
         $id = $this->Auth->user('id');
-        
+
         $user = $this->Users->get($id);
         if ($this->request->is(['patch', 'post', 'put'])) {
 

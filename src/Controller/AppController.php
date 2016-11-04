@@ -79,7 +79,6 @@ class AppController extends Controller
          *
          * Caso contrario usar layout `sugar`.
          */
-        
         $notLoggedinActions = ['login', 'requestResetPassword', 'resetPassword', 'register'];
 
         if ($this->request->params['plugin'] == 'CakeDC/Users' &&

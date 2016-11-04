@@ -30,8 +30,9 @@ class UsersFixture extends TestFixture
         'token_expires' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'api_token' => ['type' => 'string', 'length' => 120, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'activation_date' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-        'is_active' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
+        'active' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
         'role_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'email' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         '_indexes' => [
             'fk_users_roles_idx' => ['type' => 'index', 'columns' => ['role_id'], 'length' => []],
         ],
@@ -55,19 +56,20 @@ class UsersFixture extends TestFixture
         [
             'id' => 1,
             'name' => 'Lorem ipsum dolor sit amet',
-            'created' => '2016-10-16 22:53:53',
-            'modified' => '2016-10-16 22:53:53',
+            'created' => '2016-11-03 23:35:22',
+            'modified' => '2016-11-03 23:35:22',
             'username' => 'Lorem ipsum dolor sit amet',
             'password' => 'Lorem ipsum dolor sit amet',
             'profile_picture_dir' => 'Lorem ipsum dolor sit amet',
             'profile_picture' => 'Lorem ipsum dolor sit amet',
             'is_superuser' => 1,
             'token' => 'Lorem ipsum dolor sit amet',
-            'token_expires' => '2016-10-16 22:53:53',
+            'token_expires' => '2016-11-03 23:35:22',
             'api_token' => 'Lorem ipsum dolor sit amet',
-            'activation_date' => '2016-10-16 22:53:53',
-            'is_active' => 1,
-            'role_id' => 1
+            'activation_date' => '2016-11-03 23:35:22',
+            'active' => 1,
+            'role_id' => 1,
+            'email' => 'Lorem ipsum dolor sit amet'
         ],
     ];
 }

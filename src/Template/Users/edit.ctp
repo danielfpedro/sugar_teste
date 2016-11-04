@@ -33,8 +33,9 @@
             echo $this->Form->input('token_expires', ['empty' => true]);
             echo $this->Form->input('api_token');
             echo $this->Form->input('activation_date', ['empty' => true]);
-            echo $this->Form->input('is_active');
+            echo $this->Form->input('active');
             echo $this->Form->input('role_id', ['options' => $roles]);
+            echo $this->Form->input('email');
         ?>
         </div>
     </div>

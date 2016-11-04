@@ -85,6 +85,8 @@ class UsersTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
+        echo 'oi';
+        exit();
         $validator
             ->integer('id')
             ->allowEmpty('id', 'create');
@@ -92,6 +94,7 @@ class UsersTable extends Table
         $validator
             ->requirePresence('name', 'create')
             ->notEmpty('name');
+            ->minLength('name', 100);
 
         $validator
             ->requirePresence('username', 'create')
@@ -126,9 +129,13 @@ class UsersTable extends Table
             ->allowEmpty('activation_date');
 
         $validator
-            ->boolean('is_active')
-            ->requirePresence('is_active', 'create')
-            ->notEmpty('is_active');
+            ->boolean('active')
+            ->requirePresence('active', 'create')
+            ->notEmpty('active');
+
+        $validator
+            ->email('email')
+            ->allowEmpty('email');
 
 
         $validator
@@ -177,6 +184,7 @@ class UsersTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->isUnique(['username']));
+        $rules->add($rules->isUnique(['email']));
         $rules->add($rules->existsIn(['role_id'], 'Roles'));
 
         return $rules;

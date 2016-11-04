@@ -40,8 +40,8 @@ class PostsFixture extends TestFixture
         [
             'id' => 1,
             'title' => 'Lorem ipsum dolor sit amet',
-            'created' => '2016-10-16 22:53:48',
-            'modified' => '2016-10-16 22:53:48'
+            'created' => '2016-11-03 23:35:21',
+            'modified' => '2016-11-03 23:35:21'
         ],
     ];
 }

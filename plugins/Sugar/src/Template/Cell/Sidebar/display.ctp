@@ -18,9 +18,22 @@
                             $hideSubmenu = true;
                             $v['isActive'] = false;
 
-                            if (isset($v['childs'])) {
+                            if ($v['url']['controller'] == $this->request->params['controller'] && $v['url']['action'] == $this->request->params['action']) {
+
+                                $hideSubmenu = false;
+                                $v['isActive'] = true;
+                                
+                            }
+
+                            if (!$v['isActive'] && isset($v['childs'])) {
                                 foreach ($v['childs'] as $child) {
-                                    if (($child['controller'] == $this->request->params['controller'] && $child['action'] == $this->request->params['action'])) {
+
+                                    $actions = explode('|', $child['action']);
+
+                                    if (
+                                        in_array($this->request->params['action'], $actions) &&
+                                        $this->request->params['controller'] == $child['controller']
+                                    ) {
 
                                         $hideSubmenu = false;
                                         $v['isActive'] = true;
@@ -30,13 +43,7 @@
                                     }
                                 }
                             }
-                            if ($v['url']['controller'] == $this->request->params['controller'] && $v['url']['action'] == $this->request->params['action']) {
 
-                                $hideSubmenu = false;
-                                $v['isActive'] = true;
-                                
-                            }
-                            
                             $itemsSubmenu[] = $v;
                         }
                     ?>
@@ -47,14 +54,36 @@
                     <ul class="nav nav-pills nav-stacked sugar-nav-sidebar submenu <?= ($hideSubmenu) ? 'sugar-submenu-hidden' : '' ?>">    
                         <?php foreach ($itemsSubmenu as $v): ?>
                             <li>
-                                <?= $this->Html->link($v['label'], $v['url'], ['class' => (($v['isActive']) ? 'active' : ''), 'escape' => false]) ?>
+                                <?= $this->Html->link(
+                                    $v['label'],
+                                    $v['url'],
+                                    [
+                                        'class' => (($v['isActive']) ? 'active' : ''),
+                                        'escape' => false
+                                    ])
+                                ?>
                             </li>                    
                         <?php endforeach ?>
                     </ul>
                 </li>
             <?php else: ?>
                 <?php 
+
                     $isActive = ($value['url']['controller'] == $this->request->params['controller'] && $value['url']['action'] == $this->request->params['action']);
+
+                    if (!$isActive && isset($value['childs'])) {
+                        foreach ($value['childs'] as $k => $v) {
+
+                            $actions = explode('|', $v['action']);
+
+                            if (
+                                $this->request->params['controller'] == $v['controller'] &&
+                                in_array($this->request->params['action'], $actions)
+                            ) {
+                                $isActive = true;
+                            }
+                        }
+                    }
                 ?>
                 <li>
                     <?= $this->Html->link($this->Html->faicon($value['icon']) . $value['label'], $value['url'], ['class' => (($isActive) ? 'active' : ''), 'escape' => false]) ?>
@@ -63,23 +92,4 @@
         <?php endforeach ?>
         <li class="sugar-sidemenu-separator"></li>
     <?php endforeach ?>
-<!--     <li class="has-submenu">
-        <a href="#" class="active">
-            <span class="fa fa-envelope fa-fw"></span>
-            Olá gente
-        </a>
-        <ul class="nav nav-pills nav-stacked sugar-nav-sidebar submenu">
-            <li>
-                <a href="#">
-                    Oi zhanti
-                </a>
-            </li>
-        </ul>
-    </li>
-    <li>
-        <a href="#">
-            <span class="fa fa-shopping-cart fa-fw"></span> 
-            Olá gente
-        </a>
-    </li> -->
 </ul>

@@ -40,8 +40,8 @@ class RolesFixture extends TestFixture
         [
             'id' => 1,
             'name' => 'Lorem ipsum dolor sit amet',
-            'created' => '2016-10-16 22:53:51',
-            'modified' => '2016-10-16 22:53:51'
+            'created' => '2016-11-03 23:35:21',
+            'modified' => '2016-11-03 23:35:21'
         ],
     ];
 }

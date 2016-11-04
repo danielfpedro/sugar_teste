@@ -56,6 +56,8 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
+    $routes->connect('/users/profile-settings', ['controller' => 'Users', 'action' => 'profileSettings']);
+
     /**
      * Connect catchall routes for all controllers.
      *

@@ -63,8 +63,9 @@
                     <th><?= $this->Paginator->sort('token_expires') ?></th>
                     <th><?= $this->Paginator->sort('api_token') ?></th>
                     <th><?= $this->Paginator->sort('activation_date') ?></th>
-                    <th><?= $this->Paginator->sort('is_active') ?></th>
+                    <th><?= $this->Paginator->sort('active') ?></th>
                     <th><?= $this->Paginator->sort('role_id') ?></th>
+                    <th><?= $this->Paginator->sort('email') ?></th>
                         <th style="width: 120px;">
                     </th>
                 </tr>
@@ -86,8 +87,9 @@
                         <td><?= h($user->token_expires) ?></td>
                         <td><?= h($user->api_token) ?></td>
                         <td><?= h($user->activation_date) ?></td>
-                        <td><?= h($user->is_active) ?></td>
+                        <td><?= h($user->active) ?></td>
                         <td><?= $user->has('role') ? $this->Html->label($user->role->name, 'primary') : '' ?></td>
+                        <td><?= h($user->email) ?></td>
                         <!-- Botões de Ação -->
                     <td class="text-right">
                         <!-- Botão Editar -->

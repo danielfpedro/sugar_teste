@@ -9,6 +9,12 @@ return [
                 'url' => [
                     'controller' => 'Posts',
                     'action' => 'index'
+                ],
+                'childs' => [
+                    [
+                        'controller' => 'Posts',
+                        'action' => 'add|edit'
+                    ]
                 ]
             ],
         ],
@@ -24,6 +30,12 @@ return [
                             'controller' => 'Posts',
                             'action' => 'index'
                         ],
+                        'childs' => [
+                            [
+                                'controller' => 'Posts',
+                                'action' => 'add|edit'
+                            ]
+                        ]
                     ]  
                 ]
             ],

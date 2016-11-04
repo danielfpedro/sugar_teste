@@ -20,8 +20,9 @@ use Cake\Auth\DefaultPasswordHasher;
  * @property \Cake\I18n\Time $token_expires
  * @property string $api_token
  * @property \Cake\I18n\Time $activation_date
- * @property bool $is_active
+ * @property bool $active
  * @property int $role_id
+ * @property string $email
  *
  * @property \App\Model\Entity\Role $role
  */
